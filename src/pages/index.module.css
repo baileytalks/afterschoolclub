@@ -1,8 +1,12 @@
 .box {
-  background-color: #E29C58;
+  background-color: #fff;
   padding: 1rem;
-  border-radius: 3px;
   display: grid;
+  color: #222;
+}
+
+.box a {
+  color: #222;
 }
 
 .outside {
@@ -10,4 +14,18 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   grid-auto-rows: minmax(100px, auto);
+  margin-top: 2rem;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.highlight {
+  background-color: #3772FF;
+}
+
+.innerContent {
 }

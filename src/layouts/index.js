@@ -9,28 +9,18 @@ const ListLink = props =>
     </Link>
   </li>
 
-export default ({ children, data }) =>
-<div style={{ margin: `0 auto`, maxWidth: 960, padding: `1.25rem 1rem` }}>
-  <header style={{ marginBottom: `1.5rem` }}>
-    <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-      <h3 style={{ display: `inline` }}>{data.site.siteMetadata.title}</h3>
-    </Link>
-    <ul style={{ listStyle: `none`, float: `right` }}>
-      <ListLink to="/">home</ListLink>
-      <ListLink to="/classes/">classes</ListLink>
-      <ListLink to="/teachers/">teachers</ListLink>
-      <ListLink to="/venues/">venues</ListLink>
-    </ul>
-  </header>
-  {children()}
-</div>
-
-export const query = graphql`
-  query LayoutQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+export default ({ children }) =>
+  <div className={styles.main}>
+    <div className={styles.header}>
+      <Link to="/" className={styles.logo}>
+        after school club
+      </Link>
+      <ul className={styles.nav}>
+        <ListLink to="/">home</ListLink>
+        <ListLink to="/classes/">classes</ListLink>
+        <ListLink to="/teachers/">teachers</ListLink>
+        <ListLink to="/venues/">venues</ListLink>
+      </ul>
+    </div>
+    {children()}
+  </div>
